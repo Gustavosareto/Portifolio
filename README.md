@@ -91,7 +91,6 @@ Atualize os links em `components/Contact.tsx`
 ## 📫 Contato
 
 - Email: gustavosareto1@gmail.com
-- LinkedIn: [linkedin.com](https://linkedin.com)
 - GitHub: [github.com](https://github.com/Gustavosareto)
 
 ---
