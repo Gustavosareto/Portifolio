@@ -7,7 +7,7 @@ const ANIMATION_CONFIG = { SMOOTH_TAU: 0.25, MIN_COPIES: 2, COPY_HEADROOM: 2 };
 
 const toCssLength = (value: string | number | undefined) => (typeof value === 'number' ? `${value}px` : (value ?? undefined));
 
-const useResizeObserver = (callback: () => void, elements: React.RefObject<HTMLElement>[], dependencies: any[]) => {
+const useResizeObserver = (callback: () => void, elements: React.RefObject<HTMLElement | null>[], dependencies: any[]) => {
   useEffect(() => {
     if (!window.ResizeObserver) {
       const handleResize = () => callback();
@@ -28,7 +28,7 @@ const useResizeObserver = (callback: () => void, elements: React.RefObject<HTMLE
   }, [callback, elements, dependencies]);
 };
 
-const useImageLoader = (seqRef: React.RefObject<HTMLElement>, onLoad: () => void, dependencies: any[]) => {
+const useImageLoader = (seqRef: React.RefObject<HTMLElement | null>, onLoad: () => void, dependencies: any[]) => {
   useEffect(() => {
     const images = seqRef.current?.querySelectorAll('img') ?? [];
     if (images.length === 0) {
@@ -59,7 +59,7 @@ const useImageLoader = (seqRef: React.RefObject<HTMLElement>, onLoad: () => void
 };
 
 const useAnimationLoop = (
-  trackRef: React.RefObject<HTMLDivElement>,
+  trackRef: React.RefObject<HTMLDivElement | null>,
   targetVelocity: number,
   seqWidth: number,
   seqHeight: number,
