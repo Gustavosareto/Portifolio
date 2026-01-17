@@ -39,7 +39,7 @@ export default function Skills() {
   return (
     <section 
       id="skills"
-      className="min-h-screen py-20 px-6 md:px-12"
+      className="py-12 md:py-16 px-4 md:px-8 lg:px-12"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -47,12 +47,12 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-3 tracking-tight">
             {t.skills.title}
           </h2>
-          <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="text-text-secondary text-base md:text-lg max-w-2xl mx-auto px-4">
             {t.skills.subtitle}
           </p>
         </motion.div>

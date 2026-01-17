@@ -3,7 +3,7 @@ export const translations = {
     hero: {
       greeting: "Olá, eu sou",
       role: "Desenvolvedor Full Stack",
-      description: "Criando experiências digitais incríveis com código limpo e design moderno. 2+ anos de experiência, 20+ projetos entregues.",
+      description: "Transformo ideias em experiências digitais memoráveis através de código elegante e interfaces modernas.",
       cta: "Vamos Trabalhar Juntos",
       viewProjects: "Ver Projetos"
     },
@@ -25,7 +25,7 @@ export const translations = {
       experience: "2+ Anos de Experiência",
       projectsCount: "20+ Projetos Concluídos",
       clients: "15+ Clientes Satisfeitos",
-      description: "Desenvolvedor Full Stack apaixonado por criar soluções digitais que fazem a diferença. Com 2+ anos de experiência e mais de 20 projetos entregues, especializo-me em transformar ideias em produtos funcionais e escaláveis."
+      description: "Sou um desenvolvedor apaixonado por tecnologia e inovação. Minha jornada começou com curiosidade e evoluiu para uma carreira dedicada a construir aplicações web robustas e escaláveis. Cada projeto é uma oportunidade de aprender algo novo e entregar valor real aos usuários."
     },
     contact: {
       title: "Vamos Conversar?",
@@ -39,7 +39,7 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       role: "Full Stack Developer",
-      description: "Creating amazing digital experiences with clean code and modern design. 2+ years of experience, 20+ delivered projects.",
+      description: "Transforming ideas into memorable digital experiences through elegant code and modern interfaces.",
       cta: "Let's Work Together",
       viewProjects: "View Projects"
     },
@@ -61,7 +61,7 @@ export const translations = {
       experience: "2+ Years of Experience",
       projectsCount: "20+ Completed Projects",
       clients: "15+ Satisfied Clients",
-      description: "Full Stack Developer passionate about creating digital solutions that make a difference. With 2+ years of experience and over 20 delivered projects, I specialize in transforming ideas into functional and scalable products."
+      description: "I'm a developer passionate about technology and innovation. My journey started with curiosity and evolved into a career dedicated to building robust and scalable web applications. Every project is an opportunity to learn something new and deliver real value to users."
     },
     contact: {
       title: "Let's Talk?",

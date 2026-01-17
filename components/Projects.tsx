@@ -183,21 +183,21 @@ export default function Projects() {
       <section 
         id="projects"
         ref={projectsRef}
-        className="min-h-screen py-20 px-6 md:px-12"
+        className="py-12 md:py-16 px-4 md:px-8 lg:px-12"
       >
         <div className="max-w-7xl mx-auto">
-          <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
+          <h2 ref={titleRef} className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-3 tracking-tight">
             {t.projects.title}
           </h2>
-          <p ref={descRef} className="text-text-secondary text-lg mb-8 max-w-2xl">
+          <p ref={descRef} className="text-text-secondary text-base md:text-lg mb-6 md:mb-8 max-w-2xl">
             {t.projects.subtitle}
           </p>
 
           {/* Filtros */}
-          <div ref={filtersRef} className="flex flex-wrap gap-3 mb-12">
+          <div ref={filtersRef} className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
             <button
               onClick={() => setSelectedFilter('all')}
-              className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
+              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 ${
                 selectedFilter === 'all'
                   ? 'bg-accent text-white shadow-lg shadow-accent/20'
                   : 'bg-dark-tertiary/30 text-text-secondary border border-dark-tertiary/40 hover:border-accent/40 hover:text-accent'
@@ -227,7 +227,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-12"
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10"
             >
               {filteredProjects.map((project, index) => (
               <div
@@ -238,10 +238,10 @@ export default function Projects() {
                   animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
                   animationDelay: `${index * 0.2}s`
                 }}
-                className="bg-dark-secondary/40 backdrop-blur-xl border border-dark-tertiary/50 rounded-3xl overflow-hidden hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/5 transition-all duration-700 group cursor-pointer relative hover:scale-[1.02]"
+                className="bg-dark-secondary/40 backdrop-blur-xl border border-dark-tertiary/50 rounded-2xl md:rounded-3xl overflow-hidden hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/5 transition-all duration-700 group cursor-pointer relative hover:scale-[1.02]"
               >
                 {/* Mockup Preview */}
-                <div className="p-6 relative overflow-hidden">
+                <div className="p-4 md:p-6 relative overflow-hidden">
                   <MockupLaptop 
                     projectUrl={project.liveUrl}
                     projectName={project.title}
@@ -251,12 +251,12 @@ export default function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="px-6 pb-6 space-y-4">
-                  <h3 className="text-2xl font-bold text-text-primary tracking-tight group-hover:text-accent transition-colors duration-300">
+                <div className="px-4 md:px-6 pb-4 md:pb-6 space-y-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-text-primary tracking-tight group-hover:text-accent transition-colors duration-300">
                     {project.title}
                   </h3>
                   
-                  <p className="text-text-secondary/80 text-sm leading-relaxed line-clamp-2">
+                  <p className="text-text-secondary/80 text-xs md:text-sm leading-relaxed line-clamp-2">
                     {project.description}
                   </p>
 

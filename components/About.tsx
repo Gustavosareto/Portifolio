@@ -74,31 +74,31 @@ export default function About() {
     <section 
       id="about"
       ref={sectionRef}
-      className="min-h-screen py-20 px-6 md:px-12 relative overflow-hidden"
+      className="py-12 md:py-16 px-4 md:px-8 lg:px-12 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
           <div ref={textRef}>
-            <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4 md:mb-5 tracking-tight">
               {t.about.title}
             </h2>
-            <p className="text-text-secondary/70 mb-8 text-lg">
+            <p className="text-text-secondary/70 mb-4 md:mb-6 text-base md:text-lg">
               {t.about.subtitle}
             </p>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="text-center p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
-                <div className="text-3xl font-bold text-accent mb-1">2+</div>
-                <div className="text-xs text-text-secondary">{t.about.experience}</div>
+            <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
+              <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">2+</div>
+                <div className="text-[10px] md:text-xs text-text-secondary">{t.about.experience}</div>
               </div>
-              <div className="text-center p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
-                <div className="text-3xl font-bold text-accent mb-1">20+</div>
-                <div className="text-xs text-text-secondary">{t.about.projectsCount}</div>
+              <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">20+</div>
+                <div className="text-[10px] md:text-xs text-text-secondary">{t.about.projectsCount}</div>
               </div>
-              <div className="text-center p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
-                <div className="text-3xl font-bold text-accent mb-1">15+</div>
-                <div className="text-xs text-text-secondary">{t.about.clients}</div>
+              <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">15+</div>
+                <div className="text-[10px] md:text-xs text-text-secondary">{t.about.clients}</div>
               </div>
             </div>
             

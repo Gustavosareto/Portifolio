@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 px-6 md:px-12 flex items-center"
+      className="min-h-screen py-12 md:py-16 px-4 md:px-8 lg:px-12 flex items-center"
     >
       <div className="max-w-5xl mx-auto w-full text-center">
         <motion.div
@@ -18,10 +18,10 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-text-primary mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 md:mb-6 tracking-tight">
             {t.contact.title}
           </h2>
-          <p className="text-text-secondary text-xl mb-12 max-w-3xl mx-auto">
+          <p className="text-text-secondary text-base md:text-lg lg:text-xl mb-8 md:mb-10 max-w-3xl mx-auto px-4">
             {t.contact.subtitle}
           </p>
 
@@ -31,7 +31,7 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
-            className="group inline-flex items-center gap-3 px-12 py-5 bg-accent text-white rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 font-semibold text-xl mb-12 relative overflow-hidden"
+            className="group inline-flex items-center gap-2 md:gap-3 px-8 md:px-10 lg:px-12 py-4 md:py-5 bg-accent text-white rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/30 font-semibold text-base md:text-lg lg:text-xl mb-8 md:mb-10 relative overflow-hidden"
           >
             <span className="relative z-10">{t.contact.cta}</span>
             <svg className="w-6 h-6 transform group-hover:translate-x-2 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,13 +41,13 @@ export default function Contact() {
           </motion.a>
 
           {/* Social Links */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center px-4">
             <motion.a
               href="https://github.com/Gustavosareto"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
-              className="px-8 py-3 bg-dark-secondary/80 backdrop-blur-md text-text-primary border-2 border-dark-tertiary rounded-lg hover:border-accent transition-all duration-300 w-full sm:w-auto font-medium"
+              className="px-6 md:px-8 py-3 bg-dark-secondary/80 backdrop-blur-md text-text-primary border-2 border-dark-tertiary rounded-lg hover:border-accent transition-all duration-300 w-full sm:w-auto font-medium text-sm md:text-base"
             >
               {t.contact.github}
             </motion.a>
@@ -59,11 +59,8 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-24 pt-8 border-t border-dark-tertiary"
+          className="mt-16 md:mt-20 pt-6 md:pt-8 border-t border-dark-tertiary"
         >
-          <p className="text-text-secondary text-sm">
-            © 2026 Gustavo Sareto. Todos os direitos reservados.
-          </p>
         </motion.footer>
       </div>
     </section>

@@ -56,22 +56,27 @@ export default function MockupLaptop({ projectUrl, projectName, screenshot, imag
                         fill
                         className="object-cover object-top transition-all duration-700 ease-out group-hover/laptop:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        quality={85}
+                        placeholder="blur"
+                        blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgZmlsbD0iIzFhMWExYSIvPjwvc3ZnPg=="
                         onError={() => setImageError(true)}
                         priority={false}
                       />
                     </div>
-                  ) : (
-                    <img 
-                      src={screenshot} 
-                      alt={`Preview de ${projectName}`}
-                      className="w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover/laptop:scale-105"
-                      loading="lazy"
-                      onError={() => setImageError(true)}
-                      style={{
-                        imageRendering: 'crisp-edges',
-                      }}
-                    />
-                  )}
+                  ) : screenshot ? (
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={screenshot}
+                        alt={`Preview de ${projectName}`}
+                        fill
+                        className="object-cover object-top transition-all duration-700 ease-out group-hover/laptop:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        quality={75}
+                        onError={() => setImageError(true)}
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : null}
                   {/* Subtle gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 pointer-events-none" />
                   
