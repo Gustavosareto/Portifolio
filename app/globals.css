@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark-primary text-text-primary;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    transition: font-variation-settings 0.3s ease;
+  }
+
+  /* Debug mode */
+  body.debug-mode * {
+    outline: 1px solid rgba(59, 130, 246, 0.3) !important;
+  }
+}
+
+/* Rainbow animation para easter egg */
+@keyframes rainbow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Smooth transitions para tipografia variável */
+h1, h2, h3, h4, h5, h6 {
+  font-variation-settings: 'wght' 700;
+  transition: font-variation-settings 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover {
+  font-variation-settings: 'wght' 800;
+}
+
+/* Scroll reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Float animation for project cards */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.scroll-reveal {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+

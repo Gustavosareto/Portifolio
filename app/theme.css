@@ -1,0 +1,10 @@
+@theme {
+  --color-dark-primary: #0B0B0B;
+  --color-dark-secondary: #121212;
+  --color-dark-tertiary: #1E1E1E;
+  --color-text-primary: #EDEDED;
+  --color-text-secondary: #A1A1A1;
+  --color-accent: #3B82F6;
+  
+  --font-family-sans: Inter, Poppins, system-ui, sans-serif;
+}
