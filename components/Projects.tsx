@@ -62,6 +62,15 @@ const projects: Project[] = [
     image: '/projects/pizza-em-casa.png',
     images: ['/projects/pizza-em-casa.png'],
   },
+  {
+    id: 5,
+    title: 'Café da Vila',
+    description: 'Site sofisticado para uma cafeteria boutique com cardápio digital.',
+    fullDescription: 'Desenvolvimento de uma presença digital premium para a cafeteria Café da Vila, apresentando um cardápio interativo, história da marca e integração com sistemas de reserva.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://cafeteria-cafe-da-vila.vercel.app/',
+    screenshot: '/projects/cafe-da-vila.webp',
+  },
 ];
 
 export default function Projects() {
