@@ -22,12 +22,10 @@ export default function MockupLaptop({
   // 1. Screenshot dinâmico
   // 2. Imagem local
   // 3. Fallback
-  const previewSrc =
-    !imageError && screenshot
-      ? screenshot
-      : image
-      ? image
-      : '/projects/fallback.png';
+  const previewSrc = !imageError
+    ? (screenshot || image || '/projects/agendouu.webp')
+    : '/projects/agendouu.webp'; // Fallback temporário para uma imagem que sabemos que existe
+
 
   return (
     <div className="relative w-full aspect-[16/10] flex items-center justify-center group/laptop">

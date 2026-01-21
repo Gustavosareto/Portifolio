@@ -71,7 +71,7 @@ export default function About() {
   }, []);
 
   return (
-    <section 
+    <section
       id="about"
       ref={sectionRef}
       className="py-12 md:py-16 px-4 md:px-8 lg:px-12 relative overflow-hidden"
@@ -85,7 +85,7 @@ export default function About() {
             <p className="text-text-secondary/70 mb-4 md:mb-6 text-base md:text-lg">
               {t.about.subtitle}
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
               <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
@@ -101,7 +101,7 @@ export default function About() {
                 <div className="text-[10px] md:text-xs text-text-secondary">{t.about.clients}</div>
               </div>
             </div>
-            
+
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
                 {t.about.description}
@@ -112,25 +112,25 @@ export default function About() {
           {/* Visual com parallax em camadas */}
           <div className="relative aspect-[4/5] w-full max-w-md mx-auto">
             {/* Layer 3 - Fundo */}
-            <div 
+            <div
               ref={layer3Ref}
               className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl blur-2xl"
             />
-            
+
             {/* Layer 2 - Meio */}
-            <div 
+            <div
               ref={layer2Ref}
               className="absolute inset-4 bg-dark-secondary/60 backdrop-blur-sm border border-dark-tertiary rounded-2xl"
             />
-            
+
             {/* Layer 1 - Frente */}
-            <div 
+            <div
               ref={layer1Ref}
               className="absolute inset-8 border border-accent/20 rounded-xl overflow-hidden shadow-2xl shadow-accent/10 group"
             >
               <div className="relative w-full h-full">
                 <Image
-                  src="/projects/rosto.png"
+                  src="/projects/rosto.webp"
                   alt="Gustavo Sareto"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"

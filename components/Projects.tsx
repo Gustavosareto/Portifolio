@@ -31,8 +31,8 @@ const projects: Project[] = [
     fullDescription: 'Sistema de agendamento inteligente que permite aos usuários agendar serviços de forma rápida e prática. Inclui sistema de notificações, gestão de disponibilidade e integração com calendários.',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
     liveUrl: 'https://agendouu.vercel.app',
-    image: '/projects/agendouu.png',
-    images: ['/projects/agendouu.png'],
+    image: '/projects/agendouu.webp',
+    images: ['/projects/agendouu.webp'],
   },
   {
     id: 2,
@@ -59,8 +59,8 @@ const projects: Project[] = [
     fullDescription: 'Plataforma de delivery desenvolvida para pizzaria, com cardápio interativo, sistema de pedidos em tempo real, integração com pagamento e rastreamento de entrega.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Socket.io'],
     liveUrl: 'https://pizzaemcasa.com',
-    image: '/projects/pizza-em-casa.png',
-    images: ['/projects/pizza-em-casa.png'],
+    image: '/projects/pizza-em-casa.webp',
+    images: ['/projects/pizza-em-casa.webp'],
   },
   {
     id: 5,
@@ -90,8 +90,8 @@ export default function Projects() {
   ).sort();
 
   // Filtrar projetos
-  const filteredProjects = selectedFilter === 'all' 
-    ? projects 
+  const filteredProjects = selectedFilter === 'all'
+    ? projects
     : projects.filter(p => p.technologies.includes(selectedFilter));
 
   const handleProjectClick = (project: Project) => {
@@ -189,7 +189,7 @@ export default function Projects() {
 
   return (
     <>
-      <section 
+      <section
         id="projects"
         ref={projectsRef}
         className="py-12 md:py-16 px-4 md:px-8 lg:px-12"
@@ -206,11 +206,10 @@ export default function Projects() {
           <div ref={filtersRef} className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
             <button
               onClick={() => setSelectedFilter('all')}
-              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 ${
-                selectedFilter === 'all'
-                  ? 'bg-accent text-white shadow-lg shadow-accent/20'
-                  : 'bg-dark-tertiary/30 text-text-secondary border border-dark-tertiary/40 hover:border-accent/40 hover:text-accent'
-              }`}
+              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-300 ${selectedFilter === 'all'
+                ? 'bg-accent text-white shadow-lg shadow-accent/20'
+                : 'bg-dark-tertiary/30 text-text-secondary border border-dark-tertiary/40 hover:border-accent/40 hover:text-accent'
+                }`}
             >
               {t.projects.all || 'Todos'}
             </button>
@@ -218,11 +217,10 @@ export default function Projects() {
               <button
                 key={tech}
                 onClick={() => setSelectedFilter(tech)}
-                className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                  selectedFilter === tech
-                    ? 'bg-accent text-white shadow-lg shadow-accent/20'
-                    : 'bg-dark-tertiary/30 text-text-secondary border border-dark-tertiary/40 hover:border-accent/40 hover:text-accent'
-                }`}
+                className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${selectedFilter === tech
+                  ? 'bg-accent text-white shadow-lg shadow-accent/20'
+                  : 'bg-dark-tertiary/30 text-text-secondary border border-dark-tertiary/40 hover:border-accent/40 hover:text-accent'
+                  }`}
               >
                 {tech}
               </button>
@@ -230,7 +228,7 @@ export default function Projects() {
           </div>
 
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={selectedFilter}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -239,76 +237,76 @@ export default function Projects() {
               className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10"
             >
               {filteredProjects.map((project, index) => (
-              <div
-                key={project.id}
-                ref={(el) => { projectCardsRef.current[index] = el; }}
-                onClick={() => handleProjectClick(project)}
-                style={{
-                  animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
-                  animationDelay: `${index * 0.2}s`
-                }}
-                className="bg-dark-secondary/40 backdrop-blur-xl border border-dark-tertiary/50 rounded-2xl md:rounded-3xl overflow-hidden hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/5 transition-all duration-700 group cursor-pointer relative hover:scale-[1.02]"
-              >
-                {/* Mockup Preview */}
-                <div className="p-4 md:p-6 relative overflow-hidden">
-                  <MockupLaptop 
-                    projectUrl={project.liveUrl}
-                    projectName={project.title}
-                    screenshot={project.screenshot}
-                    image={project.image}
-                  />
-                </div>
+                <div
+                  key={project.id}
+                  ref={(el) => { projectCardsRef.current[index] = el; }}
+                  onClick={() => handleProjectClick(project)}
+                  style={{
+                    animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
+                    animationDelay: `${index * 0.2}s`
+                  }}
+                  className="bg-dark-secondary/40 backdrop-blur-xl border border-dark-tertiary/50 rounded-2xl md:rounded-3xl overflow-hidden hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/5 transition-all duration-700 group cursor-pointer relative hover:scale-[1.02]"
+                >
+                  {/* Mockup Preview */}
+                  <div className="p-4 md:p-6 relative overflow-hidden">
+                    <MockupLaptop
+                      projectUrl={project.liveUrl}
+                      projectName={project.title}
+                      screenshot={project.screenshot}
+                      image={project.image}
+                    />
+                  </div>
 
-                {/* Content */}
-                <div className="px-4 md:px-6 pb-4 md:pb-6 space-y-3">
-                  <h3 className="text-xl md:text-2xl font-bold text-text-primary tracking-tight group-hover:text-accent transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-text-secondary/80 text-xs md:text-sm leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
+                  {/* Content */}
+                  <div className="px-4 md:px-6 pb-4 md:pb-6 space-y-3">
+                    <h3 className="text-xl md:text-2xl font-bold text-text-primary tracking-tight group-hover:text-accent transition-colors duration-300">
+                      {project.title}
+                    </h3>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 4).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-dark-tertiary/30 text-text-secondary/70 text-xs rounded-full border border-dark-tertiary/40 font-medium"
+                    <p className="text-text-secondary/80 text-xs md:text-sm leading-relaxed line-clamp-2">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.slice(0, 4).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-dark-tertiary/30 text-text-secondary/70 text-xs rounded-full border border-dark-tertiary/40 font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <div className="pt-2">
+                      <button
+                        onClick={() => handleProjectClick(project)}
+                        className="w-full px-4 py-3 bg-gradient-to-r from-accent/10 to-accent/5 text-accent border border-accent/20 rounded-xl hover:from-accent hover:to-accent/90 hover:text-white transition-all duration-300 text-sm font-semibold flex items-center justify-center gap-2 group/btn"
                       >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <div className="pt-2">
-                    <button
-                      onClick={() => handleProjectClick(project)}
-                      className="w-full px-4 py-3 bg-gradient-to-r from-accent/10 to-accent/5 text-accent border border-accent/20 rounded-xl hover:from-accent hover:to-accent/90 hover:text-white transition-all duration-300 text-sm font-semibold flex items-center justify-center gap-2 group/btn"
-                    >
-                      <span>{t.projects.viewPreview}</span>
-                      <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                    </button>
+                        <span>{t.projects.viewPreview}</span>
+                        <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
-            </div>
-          ))}
+              ))}
             </motion.div>
           </AnimatePresence>
         </div>
       </section>
 
-    {selectedProject && (
-      <ProjectModal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        project={selectedProject}
-      />
-    )}
-  </>
+      {selectedProject && (
+        <ProjectModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          project={selectedProject}
+        />
+      )}
+    </>
   );
 }
