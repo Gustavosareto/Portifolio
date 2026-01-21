@@ -21,17 +21,17 @@ export default function Hero() {
         opacity: 0,
         duration: 1,
       })
-      .from(subtitleRef.current, {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-      }, '-=0.5')
-      .from(buttonsRef.current?.children || [], {
-        y: 20,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.15,
-      }, '-=0.4');
+        .from(subtitleRef.current, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+        }, '-=0.5')
+        .from(buttonsRef.current?.children || [], {
+          y: 20,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.15,
+        }, '-=0.4');
     }, heroRef);
 
     return () => ctx.revert();
@@ -45,7 +45,7 @@ export default function Hero() {
   };
 
   return (
-    <section 
+    <section
       ref={heroRef}
       className="min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-12 relative"
     >
@@ -55,8 +55,8 @@ export default function Hero() {
         <p className="text-accent text-base md:text-lg font-medium mb-3 tracking-wide">
           {t.hero.greeting}
         </p>
-        
-        <h1 
+
+        <h1
           ref={nameRef}
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary mb-4 md:mb-5 tracking-tight"
         >
@@ -70,8 +70,8 @@ export default function Hero() {
             className="inline-block"
           />
         </h1>
-        
-        <p 
+
+        <p
           ref={subtitleRef}
           className="text-lg md:text-xl text-text-secondary mb-3 md:mb-4 tracking-wide font-medium"
         >

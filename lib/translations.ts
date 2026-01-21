@@ -25,6 +25,12 @@ export const translations = {
       experience: "2+ Anos de Experiência",
       projectsCount: "20+ Projetos Concluídos",
       clients: "15+ Clientes Satisfeitos",
+      stat1Number: "100%",
+      stat1Label: "Clean Code",
+      stat2Number: "Sleek",
+      stat2Label: "UI/UX Design",
+      stat3Number: "Full",
+      stat3Label: "Stack",
       description: "Sou um desenvolvedor apaixonado por tecnologia e inovação. Minha jornada começou com curiosidade e evoluiu para uma carreira dedicada a construir aplicações web robustas e escaláveis. Cada projeto é uma oportunidade de aprender algo novo e entregar valor real aos usuários."
     },
     contact: {
@@ -61,6 +67,12 @@ export const translations = {
       experience: "2+ Years of Experience",
       projectsCount: "20+ Completed Projects",
       clients: "15+ Satisfied Clients",
+      stat1Number: "100%",
+      stat1Label: "Clean Code",
+      stat2Number: "Sleek",
+      stat2Label: "UI/UX Design",
+      stat3Number: "Full",
+      stat3Label: "Stack",
       description: "I'm a developer passionate about technology and innovation. My journey started with curiosity and evolved into a career dedicated to building robust and scalable web applications. Every project is an opportunity to learn something new and deliver real value to users."
     },
     contact: {

@@ -89,16 +89,16 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
               <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
-                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">2+</div>
-                <div className="text-[10px] md:text-xs text-text-secondary">{t.about.experience}</div>
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">{(t.about as any).stat1Number}</div>
+                <div className="text-[10px] md:text-xs text-text-secondary">{(t.about as any).stat1Label}</div>
               </div>
               <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
-                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">20+</div>
-                <div className="text-[10px] md:text-xs text-text-secondary">{t.about.projectsCount}</div>
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">{(t.about as any).stat2Number}</div>
+                <div className="text-[10px] md:text-xs text-text-secondary">{(t.about as any).stat2Label}</div>
               </div>
               <div className="text-center p-3 md:p-4 bg-dark-tertiary/30 rounded-lg backdrop-blur-sm border border-dark-tertiary">
-                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">15+</div>
-                <div className="text-[10px] md:text-xs text-text-secondary">{t.about.clients}</div>
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">{(t.about as any).stat3Number}</div>
+                <div className="text-[10px] md:text-xs text-text-secondary">{(t.about as any).stat3Label}</div>
               </div>
             </div>
 
