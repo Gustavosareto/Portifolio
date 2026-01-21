@@ -78,7 +78,7 @@ const projects: Project[] = [
     fullDescription: 'Desenvolvimento de uma presença digital premium para a cafeteria Pé de Café, apresentando um cardápio interativo, história da marca e integração com sistemas de reserva.',
     technologies: ['html', 'css', 'javascript'],
     liveUrl: 'https://pe-de-cafe-nu.vercel.app/',
-    screenshot: 'https://image.thum.io/get/maxAge/12/width/700/https://pe-de-cafe-nu.vercel.app/',
+    screenshot: '/projects/pedecafe.webp',
   },
   {
     id: 7,
@@ -87,7 +87,7 @@ const projects: Project[] = [
     fullDescription: 'Uma plataforma premium para exibição de automóveis, focada em design visual impactante, navegação fluida e apresentação detalhada de especificações técnicas.',
     technologies: ['html', 'css', 'javascript'],
     liveUrl: 'https://autoelite-nu.vercel.app/',
-    screenshot: 'https://image.thum.io/get/maxAge/12/width/700/https://autoelite-nu.vercel.app/',
+    screenshot: '/projects/autoelite.webp',
   },
 ];
 
