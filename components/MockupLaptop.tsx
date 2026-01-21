@@ -23,8 +23,8 @@ export default function MockupLaptop({
   // 2. Imagem local
   // 3. Fallback
   const previewSrc = !imageError
-    ? (screenshot || image || '/projects/agendouu.webp')
-    : '/projects/agendouu.webp'; // Fallback temporário para uma imagem que sabemos que existe
+    ? (screenshot || image || '')
+    : ''; // Se der erro, não mostramos nada (deixamos o fundo do container aparecer) ou um placeholder neutro
 
 
   return (
@@ -60,16 +60,27 @@ export default function MockupLaptop({
             <div className="relative w-full h-[calc(100%-2rem)] bg-gradient-to-br from-dark-secondary via-dark-primary to-dark-tertiary overflow-hidden">
 
               {/* Preview Image */}
-              <Image
-                src={previewSrc}
-                alt={`Preview de ${projectName}`}
-                fill
-                className="object-cover object-top transition-all duration-700 ease-out group-hover/laptop:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={80}
-                loading="lazy"
-                onError={() => setImageError(true)}
-              />
+              {previewSrc ? (
+                <Image
+                  src={previewSrc}
+                  alt={`Preview de ${projectName}`}
+                  fill
+                  className="object-cover object-top transition-all duration-700 ease-out group-hover/laptop:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={80}
+                  loading="lazy"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center bg-dark-tertiary/20">
+                  <div className="text-center p-4">
+                    <div className="w-10 h-10 border-2 border-accent/30 border-t-accent rounded-full animate-spin mx-auto mb-2" />
+                    <p className="text-[10px] text-text-secondary animate-pulse uppercase tracking-widest font-semibold">
+                      Carregando Preview...
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 pointer-events-none" />

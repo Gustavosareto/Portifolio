@@ -71,6 +71,24 @@ const projects: Project[] = [
     liveUrl: 'https://cafeteria-cafe-da-vila.vercel.app/',
     screenshot: '/projects/cafe-da-vila.webp',
   },
+  {
+    id: 6,
+    title: 'Pé de Café',
+    description: 'Site sofisticado para uma cafeteria de alto padrão com cardápio digital.',
+    fullDescription: 'Desenvolvimento de uma presença digital premium para a cafeteria Pé de Café, apresentando um cardápio interativo, história da marca e integração com sistemas de reserva.',
+    technologies: ['html', 'css', 'javascript'],
+    liveUrl: 'https://gustavosareto.github.io/Pe-de-Cafe/',
+    screenshot: 'https://image.thum.io/get/maxAge/12/width/700/https://gustavosareto.github.io/Pe-de-Cafe/',
+  },
+  {
+    id: 7,
+    title: 'Drive Select',
+    description: 'Showroom digital de veículos de luxo com interface moderna e responsiva.',
+    fullDescription: 'Uma plataforma premium para exibição de automóveis, focada em design visual impactante, navegação fluida e apresentação detalhada de especificações técnicas.',
+    technologies: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://loja-de-carros-nu.vercel.app/',
+    screenshot: 'https://image.thum.io/get/maxAge/12/width/700/https://loja-de-carros-nu.vercel.app/',
+  },
 ];
 
 export default function Projects() {
