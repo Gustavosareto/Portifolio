@@ -3,18 +3,18 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LogoLoop from './LogoLoop';
-import { 
-  SiReact, 
-  SiNextdotjs, 
-  SiTypescript, 
-  SiJavascript, 
-  SiNodedotjs, 
-  SiPython, 
-  SiTailwindcss, 
-  SiPostgresql, 
-  SiMongodb, 
-  SiGit, 
-  SiDocker 
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiNodedotjs,
+  SiPython,
+  SiTailwindcss,
+  SiPostgresql,
+  SiMongodb,
+  SiGit,
+  SiDocker
 } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
 
@@ -35,9 +35,9 @@ const techLogos = [
 
 export default function Skills() {
   const { t } = useLanguage();
-  
+
   return (
-    <section 
+    <section
       id="skills"
       className="py-12 md:py-16 px-4 md:px-8 lg:px-12"
     >
@@ -45,7 +45,7 @@ export default function Skills() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-12"
         >

@@ -128,23 +128,23 @@ export default function Projects() {
       gsap.from(titleRef.current, {
         opacity: 0,
         y: 30,
-        duration: 1,
-        ease: 'power3.out',
+        duration: 0.6,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: titleRef.current,
-          start: 'top bottom-=100',
+          start: 'top bottom-=50',
         },
       });
 
       gsap.from(descRef.current, {
         opacity: 0,
         y: 20,
-        duration: 1,
-        delay: 0.2,
-        ease: 'power3.out',
+        duration: 0.6,
+        delay: 0.1,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: descRef.current,
-          start: 'top bottom-=100',
+          start: 'top bottom-=50',
         },
       });
 
@@ -152,12 +152,12 @@ export default function Projects() {
       gsap.from(filtersRef.current, {
         opacity: 0,
         y: 20,
-        duration: 1,
-        delay: 0.3,
-        ease: 'power3.out',
+        duration: 0.6,
+        delay: 0.15,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: filtersRef.current,
-          start: 'top bottom-=100',
+          start: 'top bottom-=50',
         },
       });
 
@@ -170,19 +170,19 @@ export default function Projects() {
           card,
           {
             opacity: 0,
-            y: 60,
-            scale: 0.95,
+            y: 40,
+            scale: 0.98,
           },
           {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 1.2,
-            ease: 'power3.out',
-            delay: index * 0.15,
+            duration: 0.6,
+            ease: 'power2.out',
+            delay: index * 0.05,
             scrollTrigger: {
               trigger: card,
-              start: 'top bottom-=80',
+              start: 'top bottom-=50',
               toggleActions: 'play none none none',
             },
           }
@@ -196,7 +196,7 @@ export default function Projects() {
             trigger: card,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 3,
+            scrub: 1,
           },
         });
       });

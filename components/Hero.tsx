@@ -17,21 +17,21 @@ export default function Hero() {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.from(nameRef.current, {
-        y: 50,
+        y: 30,
         opacity: 0,
-        duration: 1,
+        duration: 0.6,
       })
         .from(subtitleRef.current, {
-          y: 30,
-          opacity: 0,
-          duration: 0.8,
-        }, '-=0.5')
-        .from(buttonsRef.current?.children || [], {
           y: 20,
           opacity: 0,
-          duration: 0.6,
-          stagger: 0.15,
-        }, '-=0.4');
+          duration: 0.5,
+        }, '-=0.3')
+        .from(buttonsRef.current?.children || [], {
+          y: 15,
+          opacity: 0,
+          duration: 0.4,
+          stagger: 0.08,
+        }, '-=0.2');
     }, heroRef);
 
     return () => ctx.revert();
@@ -63,8 +63,8 @@ export default function Hero() {
           <TextType
             text="Gustavo Sareto"
             as="span"
-            typingSpeed={100}
-            initialDelay={500}
+            typingSpeed={60}
+            initialDelay={300}
             loop={false}
             showCursor={false}
             className="inline-block"

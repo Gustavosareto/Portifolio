@@ -26,7 +26,7 @@ export default function About() {
           trigger: sectionRef.current,
           start: 'top bottom',
           end: 'bottom top',
-          scrub: 2,
+          scrub: 1,
         },
       });
 
@@ -37,7 +37,7 @@ export default function About() {
           trigger: sectionRef.current,
           start: 'top bottom',
           end: 'bottom top',
-          scrub: 1.5,
+          scrub: 1,
         },
       });
 
@@ -56,12 +56,12 @@ export default function About() {
       gsap.from(textRef.current?.children || [], {
         opacity: 0,
         y: 40,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power3.out',
+        stagger: 0.1,
+        duration: 0.6,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: textRef.current,
-          start: 'top bottom-=100',
+          start: 'top bottom-=50',
           toggleActions: 'play none none none',
         },
       });
